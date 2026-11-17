@@ -1,20 +1,15 @@
-# views/student_view.py
-
 class StudentConsoleView:
-    """Maneja toda la interacción por consola con el usuario."""
-
-    @staticmethod
-    def show_message(message: str):
+    def show_message(self, message):
         print(message)
 
-    @staticmethod
-    def show_range_results(min_id: int, max_id: int, students: list):
-        print("\n--- Reporte de Estudiantes ---")
+    def show_range_results(self, min_id, max_id, student_ids):
+        print("\n --- REPORTE DE ESTUDIANTES ---")
         print(f"Buscando IDs entre {min_id} y {max_id}...")
 
-        if not students:
+        if not student_ids:
             print("No se encontraron estudiantes en ese rango.")
         else:
-            print(f"Estudiantes encontrados: {students}")
-            print(f"Total encontrados: {len(students)}")
+            print(f"Estudiantes encontrados: {student_ids}")
+            print(f"Total encontrados: {len(student_ids)}")
+
         print("------------------------------\n")
